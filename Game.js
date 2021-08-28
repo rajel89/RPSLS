@@ -36,7 +36,7 @@ class Game {
         while (1) {
             console.log("Player One's score: " + this.playerOne.getScore());
             console.log("AI score: " + this.playerTwo.getScore());
-            console.log("--------------------------------------");
+            console.log("\n--------------------------------------");
 
             let playerOneInput = null;
             while (1) {
@@ -44,7 +44,9 @@ class Game {
                
                 console.log("\nPlayer One's turn\n   ")
                 console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
-                playerOneInput = prompt("",{ echo: '' });
+
+                playerOneInput = prompt("",{ echo: '' });  //Added { echo: '' } to hide the value the user entered//
+
                 if (playerOneInput === 'A' || playerOneInput === 'B' || playerOneInput === 'C'|| playerOneInput === 'D'|| playerOneInput === 'E') {
                     break;
                 }
@@ -60,8 +62,7 @@ class Game {
                 this.assignScore(turnWinner);
                 let hasWon = this.checkWinner();
                 if (hasWon) {
-                    console.log("\nGame Over...");
-                    console.log("--------------------------------------");
+                    console.log("\n------------------Game Over!! --------------------\n");
                     return;
                 }
             }
@@ -71,21 +72,23 @@ class Game {
     getAIInput() {
         let num = Math.floor(Math.random() * 6) + 1;
         return this.
-        Options[num];
+        options[num];
     }
 
     gameLoopForMultiPlayer() {
         while (1) {
             console.log("Player One's score: " + this.playerOne.getScore());
             console.log("Player Two's score: " + this.playerTwo.getScore());
-
+            
             let playerOneInput = null;
             let playerTwoInput = null;
             while (1) {
                 console.log("\n--------------------------------------");
                 console.log("Player One's turn\n   ")
                 console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
-                playerOneInput = prompt("", { echo: '' });
+
+                playerOneInput = prompt("", { echo: '' });   //Added { echo: '' } to hide the value the user entered//
+
                 if (playerOneInput === 'A' || playerOneInput === 'B' || playerOneInput === 'C'|| playerOneInput === 'D'|| playerOneInput === 'E') {
                     break;
                 }
@@ -95,7 +98,9 @@ class Game {
                 console.log("\n--------------------------------------");
                 console.log("Player Two's turn \n   ")
                 console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
-                playerTwoInput = prompt("", { echo: '' });
+
+                playerTwoInput = prompt("", { echo: '' });   //Added { echo: '' } to hide the value the user entered//
+
                 if (playerTwoInput === 'A' || playerTwoInput === 'B' || playerTwoInput === 'C' || playerTwoInput === 'D'|| playerTwoInput === 'E') {
                     break;
                 }
@@ -109,8 +114,7 @@ class Game {
                 this.assignScore(turnWinner);
                 let hasWon = this.checkWinner();
                 if (hasWon) {
-                    console.log("\nGame Over...");
-                    console.log("--------------------------------------");
+                    console.log("\n------------------Game Over!! --------------------\n");
                     return;
                 }
             }
