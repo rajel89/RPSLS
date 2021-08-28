@@ -1,11 +1,10 @@
 
 class Player {
-    // 'human', 'ai'
     constructor(type) {
         this.type = type;
         this.score = 0;
     }
-
+    
     increaseScore() {
         this.score = this.score + 1;
     }
@@ -14,7 +13,4 @@ class Player {
         return this.score;
     }
 }
-
-
-
 module.exports = Player;

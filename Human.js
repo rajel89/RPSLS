@@ -4,7 +4,7 @@ class Human extends Player {
     constructor(name) {
         super('human');
         this.name = name;
-        console.log('initialized player: ' + this.name + " with type " + this.type);
+        console.log('Game Mode Player: ' + this.name + " - " + this.type);
     }
 }
 

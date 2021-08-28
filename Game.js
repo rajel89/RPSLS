@@ -27,7 +27,7 @@ class Game {
             this.gameLoopForMultiPlayer();
         } else {
             this.playerOne = new Human('One');
-            this.playerTwo = new AI('AI');
+            this.playerTwo = new AI('Two');
             this.gameLoopForAI();
         }
     }
@@ -41,8 +41,8 @@ class Game {
             let playerOneInput = null;
             while (1) {
                
-                console.log("--------------------------------------");
-                console.log("Player One's turn\n   ")
+               
+                console.log("\nPlayer One's turn\n   ")
                 
                 playerOneInput = prompt("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock", { echo: '' });
                 if (playerOneInput === 'A' || playerOneInput === 'B' || playerOneInput === 'C'|| playerOneInput === 'D'|| playerOneInput === 'E') {
@@ -52,7 +52,6 @@ class Game {
                 
             }
             
-
             let AIInput = this.getAIInput();
             if (this.options[playerOneInput] !== this.options[AIInput]) {
                 console.log("\nPlayer One selected: " + this.options[playerOneInput]);
@@ -61,7 +60,7 @@ class Game {
                 this.assignScore(turnWinner);
                 let hasWon = this.checkWinner();
                 if (hasWon) {
-                    console.log("Game Over...");
+                    console.log("\nGame Over...");
                     console.log("--------------------------------------");
                     return;
                 }
@@ -70,7 +69,7 @@ class Game {
     }
 
     getAIInput() {
-        let num = Math.floor(Math.random() * 3) + 1;
+        let num = Math.floor(Math.random() * 6) + 1;
         return this.aiOptions[num];
     }
 
@@ -123,7 +122,7 @@ class Game {
             this.playerTwo.increaseScore();
             if (this.gameMode === 'multiplayer') {
             } else {
-                console.log("AI scored");
+                console.log("AI scored  " +this.playerTwo.getScore());
             }
 
         }
@@ -139,7 +138,7 @@ class Game {
             if (this.gameMode === 'multiplayer') {
                 console.log("\nPlayer Two won with a score of " + this.playerTwo.getScore());
             } else {
-                console.log("\nAI won")
+                console.log("\nAI won");
             }
             return true;
         }
@@ -169,6 +168,5 @@ class Game {
     }
 
 }
-
 
 module.exports = Game;
