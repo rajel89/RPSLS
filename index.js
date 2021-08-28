@@ -10,7 +10,8 @@ console.log('------------ Select Game Mode ------------\n')
 
 
 while (1) {
-    const selectedGameMode = prompt("A: multiplayer\nB: ai\nC: exit\n");
+    console.log("A: multiplayer\nB: ai\nC: exit\n");
+    let selectedGameMode = prompt("");
     if (selectedGameMode === 'A' || selectedGameMode === 'B' || selectedGameMode === 'C') {
         console.log("\n--------------------------------------\n");
         if (selectedGameMode === 'C') {
@@ -24,3 +25,24 @@ while (1) {
     }
 }
 
+
+// console.log('------------ Select Game Mode ------------\n')
+// console.log("A: multiplayer\nB: ai\nC: exit\n");
+
+// let selectedGamrMode = prompt("");
+
+// switch (selectedGamrMode){
+//     case "A":
+//         this.game.selectedGamrMode();
+//         break;
+// }
+// switch (selectedGamrMode){
+//     case "B":
+//         this.game.selectedGamrMode();
+//         break;
+// }
+// switch (selectedGamrMode){
+//     case "C":
+//         this.game.gameModeOptions();
+//         break;
+// }

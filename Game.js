@@ -43,12 +43,12 @@ class Game {
                
                
                 console.log("\nPlayer One's turn\n   ")
-                
-                playerOneInput = prompt("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock", { echo: '' });
+                console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
+                playerOneInput = prompt("",{ echo: '' });
                 if (playerOneInput === 'A' || playerOneInput === 'B' || playerOneInput === 'C'|| playerOneInput === 'D'|| playerOneInput === 'E') {
                     break;
                 }
-                console.log("Choose weapon available");
+                console.log("Select Weapon of Choice!");
                 
             }
             
@@ -70,7 +70,8 @@ class Game {
 
     getAIInput() {
         let num = Math.floor(Math.random() * 6) + 1;
-        return this.aiOptions[num];
+        return this.
+        Options[num];
     }
 
     gameLoopForMultiPlayer() {
@@ -83,20 +84,22 @@ class Game {
             while (1) {
                 console.log("\n--------------------------------------");
                 console.log("Player One's turn\n   ")
-                playerOneInput = prompt("A: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock", { echo: '' });
+                console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
+                playerOneInput = prompt("", { echo: '' });
                 if (playerOneInput === 'A' || playerOneInput === 'B' || playerOneInput === 'C'|| playerOneInput === 'D'|| playerOneInput === 'E') {
                     break;
                 }
-                console.log("Please choose the available options only");
+                console.log("Select Weapon of Choice!");
             }
             while (1) {
                 console.log("\n--------------------------------------");
                 console.log("Player Two's turn \n   ")
-                playerTwoInput = prompt("A: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock", { echo: '' });
+                console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
+                playerTwoInput = prompt("", { echo: '' });
                 if (playerTwoInput === 'A' || playerTwoInput === 'B' || playerTwoInput === 'C' || playerTwoInput === 'D'|| playerTwoInput === 'E') {
                     break;
                 }
-                console.log("Please choose the available options only");
+                console.log("Select Weapon of Choice!");
             }
 
             if (this.options[playerOneInput] !== this.options[playerTwoInput]) {
@@ -149,7 +152,13 @@ class Game {
         if (this.options[playerOneInput] === 'Rock' && this.options[playerTwoInput] === 'Scissor') {
             return 'One'
         }
+        if (this.options[playerOneInput] === 'Rock' && this.options[playerTwoInput] === 'Lizard') {
+            return 'One'
+        }
         if (this.options[playerOneInput] === 'Scissor' && this.options[playerTwoInput] === 'Paper') {
+            return 'One'
+        }
+        if (this.options[playerOneInput] === 'Scissor' && this.options[playerTwoInput] === 'Lizard') {
             return 'One'
         }
         if (playerOneInput === 'Paper' && playerTwoInput === 'Rock') {
@@ -159,6 +168,9 @@ class Game {
             return 'One'
         }
         if (playerOneInput === 'Lizard' && playerTwoInput === 'Paper') {
+            return 'One'
+        }
+        if (playerOneInput === 'Lizard' && playerTwoInput === 'Spock') {
             return 'One'
         }
         if (playerOneInput === 'Spock' && playerTwoInput === 'Rock') {
