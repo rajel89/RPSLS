@@ -12,5 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "prompt-sync": "^4.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajel89/RPSLS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rajel89/RPSLS/issues"
+  },
+  "homepage": "https://github.com/rajel89/RPSLS#readme"
 }

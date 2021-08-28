@@ -1,4 +1,24 @@
-//rules of game
-const Human = require('./Human');
-const Computer = require('./Computer');
 
+
+class Game {
+    constructor(gameMode){
+
+    
+    }
+}
+
+class Human {
+
+    constructor(name) {
+
+    }
+
+
+}
+
+class Player{
+
+    constructor(type){
+        
+    }
+}
