@@ -3,13 +3,13 @@ const Game = require('./game');
 
 const gameModeOptions = {
     A: 'multiplayer',
-    B: 'ai'
+    B: 'Human vs AI'
 }
 
 
 while (1) {
     console.log('------------ Select Game Mode ------------\n')
-    console.log("A: multiplayer\nB: ai\nC: exit\n");
+    console.log("A: multiplayer\nB: Human vs ai\nC: exit\n");
     console.log("First Player to Win 3 wins!!!");
     let selectedGameMode = prompt("");
     if (selectedGameMode === 'A' || selectedGameMode === 'B' || selectedGameMode === 'C') {
@@ -23,4 +23,3 @@ while (1) {
         
     }
 }
-

@@ -84,6 +84,8 @@ class Game {
             let playerTwoInput = null;
             while (1) {
                 console.log("\n--------------------------------------");
+                console.log("\nPlayer choices will not be shown, choose the letter and press ENTER");
+                console.log("\n--------------------------------------");
                 console.log("Player One's turn\n   ")
                 console.log("\nA: Rock\nB: Scissor\nC: Paper\nD: Lizard\nE: Spock");
 
@@ -139,11 +141,11 @@ class Game {
     checkWinner() {
 
         if (this.playerOne.getScore() === 3) {
-            console.log("\nPlayer One won with a score of " + this.playerOne.getScore());
+            console.log("\nPlayer One wins with a score of " + this.playerOne.getScore());
             return true;
         } else if (this.playerTwo.getScore() === 3) {
             if (this.gameMode === 'multiplayer') {
-                console.log("\nPlayer Two won with a score of " + this.playerTwo.getScore());
+                console.log("\nPlayer Two wins with a score of " + this.playerTwo.getScore());
             } else {
                 console.log("\nAI won");
             }
